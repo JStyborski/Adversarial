@@ -84,6 +84,7 @@ cost.backward()
 with torch.no_grad():
 
     # Using the loss gradient wrt the input image, calculate the adversarial image
+    # This is like gradient ascent to try to maximize cost, and we change the image instead of model weights
     advImgTens = imgTens + eps * imgTens.grad.sign()
     advImgTens = torch.clamp(advImgTens, 0, 1)
 
