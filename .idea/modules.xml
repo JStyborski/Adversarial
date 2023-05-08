@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/FGSM.iml" filepath="$PROJECT_DIR$/.idea/FGSM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Adversarial.iml" filepath="$PROJECT_DIR$/.idea/Adversarial.iml" />
     </modules>
   </component>
 </project>
