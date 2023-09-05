@@ -31,7 +31,7 @@ def calc_local_lip(model, x, xp, top_norm, bot_norm, reduction='mean'):
     if top_norm == 'kl':
         criterion_kl = nn.KLDivLoss(reduction='none')
         top = criterion_kl(F.log_softmax(model(xp), dim=1), F.softmax(model(x), dim=1))
-        lolips = torch.sum(top, dim=1) / torch.norm(bot + 1e-6, dim=1, p=bot_norm)
+        lolip = torch.sum(top, dim=1) / torch.norm(bot + 1e-6, dim=1, p=bot_norm)
     
     # Calculate Lipschitz constant using regular norms - the top just uses output logits (no softmax)
     else:

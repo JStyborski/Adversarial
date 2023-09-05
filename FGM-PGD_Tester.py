@@ -18,9 +18,9 @@ imgDir = 'Source_Images'
 imgName = 'giant_panda.JPEG'
 
 norm = np.inf
-eps = 0.5
-alpha = 0.005
-nb_iter = 5
+eps = 0.5 # Maximum eta norm
+alpha = 0.005 # Eta multiplier when added to image
+nb_iter = 5 # Number of PGD iters
 rand_init = False
 
 targeted = True
